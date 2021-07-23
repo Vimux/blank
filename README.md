@@ -2,7 +2,7 @@
 
 Blank — starter [Hugo](https://gohugo.io/) theme for developers. Use it to make your own theme.
 
-[Live Demo](https://themes.gohugo.io/theme/blank/)
+**[Demo](https://blank-demo.netlify.app/)**
 
 ![Blank theme screenshot](https://github.com/Vimux/blank/blob/master/images/splash.png)
 
