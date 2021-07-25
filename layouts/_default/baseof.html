@@ -15,12 +15,15 @@
 	<script src="/js/jquery-3.6.0.min.js"></script>
 	<script src="/js/jquery.cookie-1.4.1.min.js"></script>
 </head>
-<body id="body" class="center">
+<body id="body" class="">
 	<script>
 		/*避免字号刷新闪烁*/
-		var cFont = $.cookie('data-font');
+		var cFont = $.cookie('data-font'),cCenter = $.cookie('data-center');
+
 		if (cFont !== undefined) $('body').addClass("font-" + cFont);
-		else $('body').addClass("font-1")
+		else $('body').addClass("font-1");
+
+		if (cCenter ==='center') $('body').addClass('center');
 	</script>
 
 	<div class="main-container">

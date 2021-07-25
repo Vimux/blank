@@ -34,7 +34,7 @@ body:before {
 }
 
 .main-container {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 body.center .main-container {
@@ -45,8 +45,9 @@ body.center .main-container {
 }
 
 @media screen and (min-width: 768px) {
-    body {
-        padding: 1em;
+    body.center {
+        padding-top: 2em;
+        /*padding: 1em;*/
     }
 }
 
@@ -115,6 +116,9 @@ body.center .main-container {
     pointer-events: all;
     color: inherit;
     max-lines: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .float-box > .wrap {
@@ -293,29 +297,29 @@ h4, h5, h6 {
 }
 
 h1 {
-    font-size: 1.7em;
+    /*font-size: 1.7em;*/
 }
 
 h2 {
-    font-size: 1.7em;
+    /*font-size: 1.7em;*/
     border-bottom: 1px solid #ddd;
     padding-bottom: 5px;
 }
 
 h3 {
-    font-size: 1.5em;
+    /*font-size: 1.5em;*/
 }
 
 h4 {
-    font-size: 1.2em;
+    /*font-size: 1.2em;*/
 }
 
 h5 {
-    font-size: 1em;
+    /*font-size: 1em;*/
 }
 
 h6 {
-    font-size: 0.9em;
+    /*font-size: 0.9em;*/
 }
 
 /*code*/

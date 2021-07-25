@@ -1,3 +1,14 @@
+# False Blank  
+Some practical things have been added, all in all, enough is enough.
+
+```
+theme = "hugo-false-blank"
+```
+
+forked from Blank.
+
+---
+
 # Blank
 
 Blank — starter [Hugo](https://gohugo.io/) theme for developers. Use it to make your own theme.

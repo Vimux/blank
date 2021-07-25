@@ -83,7 +83,9 @@ function initMarkdown() {
 
 
 function switchCenter() {
-    $('body').toggleClass("center")
+    var $body = $('body')
+    $body.toggleClass("center");
+    $.cookie('data-center', $body.hasClass("center") ? 'center' : null, {expires: 180, path: '/'})
 }
 
 function updateFont(next = false) {
