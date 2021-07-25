@@ -1,7 +1,9 @@
 {{ define "main" }}
 	<main>
-		{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+<!--		 /* $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) */ -->
+		{{ $paginator := .Paginate (.Site.RegularPages) }}
 		{{ range $paginator.Pages }}
+
 			{{ .Render "summary" }}
 		{{ end }}
 		{{ partial "pagination.html" . }}

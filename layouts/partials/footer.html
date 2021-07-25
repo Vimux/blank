@@ -1,3 +1,12 @@
+{{ with .Site.Menus.main }}
+<nav>
+	<ul>
+		{{ range . }}
+		<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+		{{ end }}
+	</ul>
+</nav>
+{{ end }}
 <footer>
-	<p>&copy; {{ now.Year }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></p>
+	<p>Hugo - &copy; {{ now.Year }} <a href="{{ .Site.BaseURL }}">{{ .Site.Title }} </a></p>
 </footer>

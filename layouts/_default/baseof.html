@@ -11,10 +11,39 @@
 	{{ with .OutputFormats.Get "RSS" -}}
 		{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{- end }}
+
+	<script src="/js/jquery-3.6.0.min.js"></script>
+	<script src="/js/jquery.cookie-1.4.1.min.js"></script>
 </head>
-<body>
-	{{ partial "header" . }}
-	{{ block "main" . }}{{ end }}
-	{{ partial "footer" . }}
+<body id="body" class="center">
+	<script>
+		/*避免字号刷新闪烁*/
+		var cFont = $.cookie('data-font');
+		if (cFont !== undefined) $('body').addClass("font-" + cFont);
+		else $('body').addClass("font-1")
+	</script>
+
+	<div class="main-container">
+		{{ partial "header" . }}
+		{{ block "main" . }}{{ end }}
+		{{ partial "footer" . }}
+	</div>
+
+	<div class="float-box">
+		<a class="header" href="#body">{{ .Title }}</a>
+		<div class="wrap">
+			<div class="index-box"></div>
+		</div>
+	</div>
+
+	<div class="tools">
+		<a  href="#" id="switch_head-index">大纲</a>
+		<a href="#" id="switch_center"></a>
+		<a href="#" id="switch_font">字号</a>
+		<a href="#body">顶部</a>
+	</div>
 </body>
+
+<script src="/js/jquery.headindex.js"></script>
+<script src="/js/main.js"></script>
 </html>
