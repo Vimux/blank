@@ -16,5 +16,6 @@
 	{{ partial "header" . }}
 	{{ block "main" . }}{{ end }}
 	{{ partial "footer" . }}
+	{{ with .Site.Params.mathjax }}{{ partial "mathjax" . }}{{ end }}
 </body>
 </html>
