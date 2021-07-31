@@ -1,0 +1,24 @@
+## This is a sample config file for your Hugo site. 
+## You can change this file and replace `config.toml` in blog root directory. 
+
+# Site settings
+baseURL = "https://www.example.com/"
+languageCode = "en-us"
+title = "A Blog"
+theme = "blank"
+description = "Enough is enough. "
+author = "author"
+sectionPagesMenu = "main"
+
+## Disqus comment module
+# disqusShortname = "yourdisqusshortname"
+
+## Uncomment the block and set mathjax as true to enable Mathjax
+[params]
+    # mathjax = true
+
+## Social media information with icons powered by FontAwesome
+[params.social]
+    # format: "font-icon-class" = { type = "Display Text", url = "Social media url" }
+    # example:
+    #"fab fa-github" = { type = "Github", url = "https://github.com/gkkeys"}

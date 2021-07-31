@@ -10,5 +10,14 @@
 				{{ end }}
 			</ul>
 		</div>
+		<!-- Social -->
+		<div>
+			{{ range $elem_key, $elem_val := .Site.Params.Social }}
+				<span>
+					<i class="{{ $elem_key }}"></i>
+					<a href="{{ $elem_val.url }}">{{ $elem_val.type }}</a>
+				</span>
+			{{ end }}
+		</div>
 	</div>
 </aside>
